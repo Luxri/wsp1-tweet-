@@ -2,3 +2,7 @@ body {
     background-color: red;
     scroll-behavior: smooth;
 }
+
+a {
+    float: right;
+}
