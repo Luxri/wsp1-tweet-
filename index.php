@@ -3,16 +3,7 @@
 include 'include/dbinfo.php';
 // mysql -u -p
 // use database;
-try {
-    $dbh = new PDO(
-        'mysql:host=localhost;dbname=' . $database . '',
-         $user,
-          $password
-    );
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-}
+include 'include/db.php';
 // select * from tweet
 $sth = $dbh->prepare('SELECT tweet.*, users.name FROM tweet
             JOIN users
