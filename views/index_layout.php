@@ -1,6 +1,6 @@
 <?php include 'head.php'?>
   <?php include 'nav.php'?>
-   
+  <div class="container"> 
         <?php foreach ($result as $row): ?>
         <section class="card mt-4">
                 <header class="card-header d-flex align-items-center bg-dark">
@@ -21,13 +21,14 @@
                 </div>
                 <footer class="card-footer">
                 <a href="tweet.php?id=<?= $row['id'] ?>"> <class="card-link">Show thread</a>
-                     
+                <?php include 'comment_layout.php'?>
                 </footer>
             </section>
         <?php endforeach ?>
     
     </div>
-<!-- 
+  </div>
+    <!-- 
     Lägga in bootstrap
     css och js
     copy paste in ett kort
